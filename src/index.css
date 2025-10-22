@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 150 8% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 150 8% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 8% 20%;
+
+    /* Moss Green Primary */
+    --primary: 100 35% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 100 40% 70%;
+    --primary-dark: 100 30% 40%;
+
+    /* Eco Accent Colors */
+    --secondary: 45 85% 85%;
+    --secondary-foreground: 150 8% 20%;
+    
+    --accent: 45 90% 70%;
+    --accent-foreground: 150 8% 20%;
+
+    /* Pollution Gray (for problem section) */
+    --pollution: 0 0% 45%;
+    --pollution-light: 0 0% 60%;
+    --pollution-dark: 0 0% 30%;
+
+    --muted: 100 20% 95%;
+    --muted-foreground: 150 8% 45%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 100 20% 90%;
+    --input: 100 20% 90%;
+    --ring: 100 35% 55%;
+
+    --radius: 0.75rem;
+
+  /* Gradients */
+  /* More visible green to white gradient for hero section */
+  --gradient-hero: linear-gradient(120deg, hsl(100 35% 38%) 0%, hsl(100 35% 55%) 60%, hsl(100 35% 85%) 85%, hsl(0 0% 100%) 100%);
+    --gradient-eco: linear-gradient(180deg, hsl(100 40% 70%) 0%, hsl(45 85% 85%) 100%);
+    --gradient-pollution: linear-gradient(135deg, hsl(0 0% 60%) 0%, hsl(0 0% 45%) 100%);
+    --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px rgba(123, 182, 97, 0.15);
+    --shadow-medium: 0 8px 30px rgba(123, 182, 97, 0.2);
+    --shadow-strong: 0 12px 40px rgba(123, 182, 97, 0.25);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', 'Inter', sans-serif;
+  }
+}
